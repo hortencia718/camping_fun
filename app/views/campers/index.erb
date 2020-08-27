@@ -1,4 +1,11 @@
 <h2>Here are All the Campers</h2>
 
-<%# Display a list all of the campers %>
+<ul>
 
+ <% @campers.map do|camper| %>
+<li> <%= link_to camper.name, camper_path(camper.id)  %>
+ <% end %>
+
+</ul>
+
+<%# when using path is the "as" in your routes  %>
